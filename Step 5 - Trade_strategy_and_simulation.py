@@ -8,7 +8,7 @@ import random
 USE_TOP_BOTTOM_2 = False
 RANDOM_STRAT = False
 
-df = pd.read_csv('merged_file.csv')
+df = pd.read_csv('RF predictions and Stock data/merged_file.csv')
 
 df['AFRM_adj_1_change_pred'] = df['AFRM_adj_1_change_pred'].ffill()
 df['AFRM_adj_1_change_pred'] = df['AFRM_adj_1_change_pred'].bfill()
