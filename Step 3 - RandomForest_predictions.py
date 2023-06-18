@@ -1,10 +1,8 @@
-# This script takes the stock+cohort data
-# Trains a model (currently xgboost but see instructions below on how to change line 67)
+# This script takes the stock+ABS data
+# Trains a random forest model
 # creates prediction files and saves for each stock in stock+'_preds.csv' file
 import pandas as pd
 from sklearn.model_selection import train_test_split
-#https://medium.com/@polanitzer/the-minimum-mean-absolute-error-mae-challenge-928dc081f031
-
 
 afrm_files = [pd.read_csv(f'Output data/cohort stock/AFRM/file_0_benchmark.csv'),
               pd.read_csv(f'Output data/cohort stock/AFRM/file_1_benchmark.csv'),
@@ -98,9 +96,6 @@ def run_model(stock, dataset, pred_column):
 
     return interim
 
-
-# results = run_model('adj_1_change')
-# results = results.drop('adj_1_change', axis=1)
 mega_dataset = pd.DataFrame()
 
 for stock , files in dict_of_stock_files.items():
@@ -120,7 +115,6 @@ for stock , files in dict_of_stock_files.items():
 
     for pred_column in ['adj_1_change']: ### The Y in our models is the string here, in this case "adj 1 change"
         interim = run_model(stock, dataset, pred_column)
-        #results = results.merge(interim, left_on='Model', right_on='Model')
 
 
 #handle the megaDataset
@@ -134,10 +128,3 @@ mega_dataset = add_columns(mega_dataset)
 mega_dataset.dropna(axis=0, inplace=True)
 run_model('mega', mega_dataset, 'adj_1_change')
 print('end')
-# print(results)
-#
-# import seaborn as sns
-# import matplotlib.pyplot as plt
-# plt.figure(figsize=(8, 8))
-# sns.barplot(x='adj_7_change', y='Model', data=results)
-# plt.show()

@@ -1,4 +1,4 @@
-# This script runs the trading strategy
+# This script configure and runs the trading strategy
 import pandas as pd
 import matplotlib.pyplot as plt
 import random
@@ -136,7 +136,6 @@ plt.show()
 
 
 def strategy_evaluation(ret, std, trades_vector, annualized_return, annualized_return_efficient, name):
-    ##soratino_ratio =
     print(
         f"Strategy evaluation for {name}: Tot Return: {round(ret, 3)} | Annualized Return: {round(annualized_return,3)} | Annualized Return Efficient: {round(annualized_return_efficient,3)} | Volatility: {round(std, 3)} | Sharpe: {round(ret / std, 3)} | # trades: {len(trades_vector)} | Best Day: {round(max(trades_vector), 3)} | Worst Day {round(min(trades_vector), 3)}")
 

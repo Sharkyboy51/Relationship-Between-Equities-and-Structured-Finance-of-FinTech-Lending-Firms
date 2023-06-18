@@ -1,8 +1,8 @@
-# This file takes cohort files of each stock
+# This file takes ABS files of each issuer
 # filters out the required columns (list_of_params)
 # takes the stock data from step 1 and filters out the required columns (stock_column_names)
-# it then merges for each stock both data sources (stock and cohort)
-# In the end it save each cohort+stock under "Output data/Cohort stock/{stock}/file_{i}_benchmark.csv"
+# it then merges for each stock both data sources (stock and ABS)
+# In the end it save each ABS+stock under "Output data/Cohort stock/{stock}/file_{i}_benchmark.csv"
 import pandas
 from datetime import datetime
 
