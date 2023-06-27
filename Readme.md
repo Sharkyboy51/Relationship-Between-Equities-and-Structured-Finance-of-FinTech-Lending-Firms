@@ -5,7 +5,9 @@ For the full research paper and more info, please email me: eyal.beneliyahu@gmai
 
 This quantitative finance research project measures the connection of two completely different financial assets, which are connected and sourcing their value from the same firm. The firms are FinTech lending firms, such as Upstart (NASDAQ:UPST) and SoFi (NASDAQ:SOFI), and the related assets are their publicly traded equities and the ABSs (Asset Backed Securities) they have issued.
 
-THe fundamental hypothesis for the existenca of such a connection, is grounded in the imporatnce of the underwriting quality for the success of the ABS and the firm's equity. The quality of underwriting  has a direct effect on the financial performance of the ABS and to the equity value, since these firms' main revenue source, and "claim to fame", is derived from the level of accuracy and scalablility in issuaning new consumer loans.
+The fundamental hypothesis for the existenca of such a connection, is grounded in the imporatnce of the underwriting quality for the success of the ABS and the firm's equity. The quality of underwriting  has a direct effect on the financial performance of the ABS and to the equity value, since these firms' main revenue source, and "claim to fame", is derived from the level of accuracy and scalablility in issuaning new consumer loans.
+
+This paper outlines an innovative research approach to ABS issuers' stocks and their ABSs' performance. Since these FinTech stocks and their ABSs are relatively young, and due to budget limitations, the data and timeframe are limited, but the same methodology and code can be applied  to a far more extensive data set. Forming this comparable pool of firms, using their ABSs performance for trading strategies, and using the firms' combined average return as the benchmark is applicable for further research.
 
 
 
