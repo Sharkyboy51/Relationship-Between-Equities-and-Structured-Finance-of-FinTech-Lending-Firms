@@ -15,7 +15,7 @@ This paper outlines an innovative research approach to ABS issuers' stocks and t
 5 publicly traded FinTech consumer lending firms:
 
 Equities:
-2021-11-30 to 2023-01-20
+The relevant dates are 2021-01-13 to 2023-01-20, which are 737 days and 506 trading days
 Using Adjusted_Closed from Yahoo Finance
 
 ABS:
@@ -30,12 +30,6 @@ NASDAQ:AFRM, 3 ABS
 Avg 22, (min 5, max 33) months of performance per ABS.
 ABS data consists of 51, monthly updated features.
 Example can be seen in "ABS Cohorts source data example/UPST/21-1" folder.
-
-
-
-
-
-
 
 
 ## Research for Trading Strategy
