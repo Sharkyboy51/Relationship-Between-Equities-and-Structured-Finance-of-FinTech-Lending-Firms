@@ -91,6 +91,8 @@ for index, row in df.iterrows():
 
     print('end of one row iteration')
 
+df['benchmark_avg_adj_1_change'] = (df['AFRM_adj_1_change'] + df['LC_adj_1_change'] + df['OPRT_adj_1_change'] + \
+                                   df['SOFI_adj_1_change'] + df['UPST_adj_1_change'])/5
 df['compounded_returns'] = (1 + df['daily_return']).cumprod() - 1
 df['compounded_returns_eventful_days'] = (1 + df['daily_return_eventful_days']).cumprod() - 1
 df['compounded_bench_returns'] = (1 + df['benchmark_avg_adj_1_change']).cumprod() - 1
@@ -124,14 +126,19 @@ benchmark_annualized_ret = (1 + benchmark_ret)**(365/benchmark_num_of_trades) - 
 
 
 
-df['compounded_returns_eventful_days'].plot(label="eventful_days", color="green", xlabel='days',
-                                            ylabel='compounded returns')
-df['compounded_returns'].plot(label="every_day", color="blue")
-df['compounded_bench_returns'].plot(label="benchmark", color="grey")
-plt.text(150, 0.47, f"Return :{round(ev_d_ret, 2) * 100}%, Sharpe: {round(ev_d_sharpe,2)}", color="green")
-plt.text(150, -0.2, f"Return :{round(all_d_ret, 2) * 100}%, Sharpe: {round(all_d_sharpe,2)}", color="blue")
-plt.text(150, -0.55, f"Return :{round(benchmark_ret, 2) * 100}%, Sharpe: {round(benchmark_sharpe,2)}", color="grey")
+plt.rcParams['font.family'] = 'Times New Roman'
+df['compounded_returns_eventful_days'].plot(label="E-EW-L/S-1", color="green")
+df['compounded_returns'].plot(label="D-EW-L/S-1", color="blue")
+df['compounded_bench_returns'].plot(label="Benchmark", color="grey", xlabel='Days',
+                                            ylabel='Compounded Returns')
+plt.text(190, 0.35, f"Return: {round(ev_d_ret, 2) * 100}%, Sharpe: {round(ev_d_sharpe,2)}", color="green")
+plt.text(190, -0.16, f"Return: {round(all_d_ret, 3) * 100}%, Sharpe: {round(all_d_sharpe,2)}", color="blue")
+plt.text(190, -0.55, f"Return: {round(benchmark_ret,3) * 100}%, Sharpe: {round(benchmark_sharpe,2)}", color="grey")
 plt.legend()
+plt.grid()
+plt.text(210, 0.24, "no trades due to strategy", color = "green", size = 7)
+plt.title('Trading Strategies Over Time')
+
 plt.show()
 
 
