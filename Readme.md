@@ -1,7 +1,8 @@
 
 # Equities and Structured Finance of FinTech Lending Firms - A Quantitative Research and Trading Strategy
 
-For the full research paper and more info, please email me: eyal.beneliyahu@gmail.com 
+For the full research paper: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4496985
+For more info, please email me: eyal.beneliyahu@gmail.com 
 
 This quantitative finance research project measures the connection of two completely different financial assets, which are connected and sourcing their value from the same firm. The firms are FinTech lending firms, such as Upstart (NASDAQ:UPST) and SoFi (NASDAQ:SOFI), and the related assets are their publicly traded equities and the ABSs (Asset Backed Securities) they have issued.
 
